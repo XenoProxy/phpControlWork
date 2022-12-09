@@ -54,9 +54,9 @@ function sumOfElements($arr){
     }
     return $sum;
 }
-echo sumOfElements($arr);
+echo "Сумма элементов одномерного массива: " . sumOfElements($arr);
 echo "</br>";
-echo sumOfElements($arr2);
+echo "Сумма элементов двумерного массива: " . sumOfElements($arr2);
 echo "</br></br>";
 
 
@@ -73,13 +73,26 @@ function reverse($arr){
     
     print_r($arr);
 }
+echo "Изначальный массив: </br>";
+print_r($arr);
+echo "</br></br> Перевернутый массив: </br>";
 reverse($arr);
 echo "</br></br>";
 
 
 // matrix transposition ==========================
-
-
-
+function matrixTransposition($matrix){
+    $tr_matrix = [[]];
+    for($i = 0; $i < count($matrix); $i++){
+        for ($j = 0; $j < count($matrix); $j++){
+            $tr_matrix[$i][$j] = $matrix[$j][$i];
+        }
+    }
+    echo "Изначальная матрица: </br>";
+    print_r($matrix);
+    echo "</br></br> Транспонированная матрица: </br>";
+    print_r($tr_matrix);
+}
+matrixTransposition([[1,5,2], [3,7,2], [3,8,2]]);
 
 ?>
