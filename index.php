@@ -73,11 +73,11 @@ function reverse($arr){
     
     print_r($arr);
 }
-echo "Изначальный массив: </br>";
+echo "Изначальный массив: </br><pre>";
 print_r($arr);
-echo "</br></br> Перевернутый массив: </br>";
+echo "</pre></br></br> Перевернутый массив: </br><pre>";
 reverse($arr);
-echo "</br></br>";
+echo "</pre></br></br>";
 
 
 // matrix transposition ==========================
@@ -88,10 +88,11 @@ function matrixTransposition($matrix){
             $tr_matrix[$i][$j] = $matrix[$j][$i];
         }
     }
-    echo "Изначальная матрица: </br>";
+    echo "Изначальная матрица: </br><pre>";
     print_r($matrix);
-    echo "</br></br> Транспонированная матрица: </br>";
+    echo "</pre></br></br> Транспонированная матрица: </br><pre>";
     print_r($tr_matrix);
+    echo "</pre>";
 }
 matrixTransposition([[1,5,2], [3,7,2], [3,8,2]]);
 
